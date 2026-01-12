@@ -1,0 +1,3 @@
+name: mmconv_referential
+root: "/home/maoxuan/data/"
+json: "./data/out_part_single.json"

@@ -1,0 +1,61 @@
+Metadata-Version: 2.4
+Name: vlmeval
+Version: 0.1.0
+Summary: Unified VLM evaluation code for the mmconv benchmark paper.
+Author: Anna Deichler
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: torch@ https://download.pytorch.org/whl/cu124/torch-2.6.0%2Bcu124-cp310-cp310-linux_x86_64.whl
+Requires-Dist: torchvision@ https://download.pytorch.org/whl/cu124/torchvision-0.21.0%2Bcu124-cp310-cp310-linux_x86_64.whl
+Requires-Dist: torchaudio@ https://download.pytorch.org/whl/cu124/torchaudio-2.6.0%2Bcu124-cp310-cp310-linux_x86_64.whl
+Requires-Dist: transformers==4.34.0
+Requires-Dist: tokenizers==0.14.1
+Requires-Dist: accelerate==0.31.0
+Requires-Dist: deepspeed==0.9.5
+Requires-Dist: peft==0.4.0
+Requires-Dist: sentencepiece==0.1.99
+Requires-Dist: timm==0.6.13
+Requires-Dist: einops==0.6.1
+Requires-Dist: einops-exts==0.0.4
+Requires-Dist: huggingface_hub<0.20,>=0.17
+Requires-Dist: bitsandbytes==0.41.0
+Requires-Dist: flash-attn>=2; platform_system == "Linux" and platform_machine == "x86_64"
+Requires-Dist: pytorchvideo
+Requires-Dist: decord
+Requires-Dist: numpy
+Requires-Dist: pillow
+Requires-Dist: opencv-python
+Requires-Dist: scikit-image
+Requires-Dist: scikit-learn==1.2.2
+Requires-Dist: omegaconf
+Requires-Dist: iopath
+Requires-Dist: ftfy
+Requires-Dist: librosa
+Requires-Dist: pycocotools
+Requires-Dist: tqdm
+Requires-Dist: prettytable
+Requires-Dist: requests
+Requires-Dist: httpx==0.23.0
+Requires-Dist: shortuuid
+Requires-Dist: gradio==3.39.0
+Requires-Dist: gradio_client==0.7.0
+Requires-Dist: markdown2[all]
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: wandb
+Requires-Dist: openai>=1.0.0
+Requires-Dist: groundinggpt@ git+https://github.com/annadeichler/GroundingGPT@114abe7
+Requires-Dist: pytorchvideo@ git+https://github.com//facebookresearch/pytorchvideo@main
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: pre-commit; extra == "dev"
+Provides-Extra: grounding
+Requires-Dist: groundinggpt@ git+https://github.com/lzw-lzw/GroundingGPT@<commit-sha> ; extra == "grounding"
+
+# mm-conv-vlm

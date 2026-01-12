@@ -1,0 +1,18 @@
+models:
+  kosmos2:
+    enabled: true
+
+    # ---- model ----
+    model_name: Kosmos-2 (patch14-224)
+    ckpt: microsoft/kosmos-2-patch14-224
+    device: cuda:0          # omit to let accelerate do device_map="auto"
+    device_map: auto        # "auto" | null (null when device pinned)
+    dtype: auto             # auto|float16|bfloat16|float32
+
+    # Prompt construction for phrase-in-context grounding
+    prompt_style: preceding  # "preceding" | "full"
+    min_left_context: 0      # ensure at least this many chars of left context; 0 = no minimum
+
+    # ---- generation ----
+    generation:
+      max_new_tokens: 64

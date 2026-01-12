@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+vlmeval/mmconv_vlm_bench.egg-info/PKG-INFO
+vlmeval/mmconv_vlm_bench.egg-info/SOURCES.txt
+vlmeval/mmconv_vlm_bench.egg-info/dependency_links.txt
+vlmeval/mmconv_vlm_bench.egg-info/entry_points.txt
+vlmeval/mmconv_vlm_bench.egg-info/requires.txt
+vlmeval/mmconv_vlm_bench.egg-info/top_level.txt

@@ -1,0 +1,5 @@
+results_dir: "./results"
+iou_thresholds: [0.3, 0.5]
+run:
+  models: [ggpt]           # only run GGPT
+  # models: [florence2]

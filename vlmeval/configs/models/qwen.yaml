@@ -1,0 +1,18 @@
+models:
+  qwen:
+    enabled: true
+    # ---- model ----
+    model_name: Qwen2.5-VL-7B-Instruct
+    ckpt: Qwen/Qwen2.5-VL-7B-Instruct
+    device: cuda:0          # omit to let accelerate do device_map="auto"
+    device_map: auto        # "auto" | null (null when device pinned)
+    dtype: auto             # auto|float16|bfloat16|float32
+    trust_remote_code: false
+    system_prompt: "You are a helpful assistant."
+    output_coord_space: pixel  # or "normalized"
+
+    # ---- generation ----
+    generation:
+      temperature: 0.0
+      max_new_tokens: 256
+      do_sample: false

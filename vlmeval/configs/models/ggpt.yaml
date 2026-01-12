@@ -1,0 +1,13 @@
+models:
+  ggpt:
+    enabled: true
+    ckpt: /home/deichler/checkpoints/ggpt/
+    device: cuda:0
+    video_llama:
+      cache_root:  /home/deichler/checkpoints/ggpt/imagebind/
+      force_override_cache_root: true  
+      ckpt:  /home/deichler/checkpoints/ggpt/imagebind/imagebind_huge.pth
+
+    gen:
+      temperature: 0.2
+      max_new_tokens: 512

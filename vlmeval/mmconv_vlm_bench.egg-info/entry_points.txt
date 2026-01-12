@@ -1,0 +1,2 @@
+[console_scripts]
+mmconv-vlm-eval = mmconv_bench.cli:main

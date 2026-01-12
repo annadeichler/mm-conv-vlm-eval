@@ -1,0 +1,13 @@
+include:
+  - models/ggpt.yaml
+  - models/florence2.yaml
+  - models/shikra.yaml
+  - models/qwen.yaml
+  - datasets/mmconv_referential.yaml
+  - eval.yaml
+
+results_dir: "./results"
+iou_thresholds: [0.3, 0.5]
+
+run:
+  models: [ggpt]   # order to run

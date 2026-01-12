@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+vlmeval/datasets/json_mmconv_referential.py
+vlmeval/eval/evaluator.py
+vlmeval/metrics/iou.py
+vlmeval/models/ggpt.py
+vlmeval/utils/geometry.py
+vlmeval/utils/masks.py
+vlmeval/utils/viz.py
+vlmeval/vlmeval.egg-info/PKG-INFO
+vlmeval/vlmeval.egg-info/SOURCES.txt
+vlmeval/vlmeval.egg-info/dependency_links.txt
+vlmeval/vlmeval.egg-info/entry_points.txt
+vlmeval/vlmeval.egg-info/requires.txt
+vlmeval/vlmeval.egg-info/top_level.txt

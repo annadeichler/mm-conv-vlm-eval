@@ -1,0 +1,11 @@
+models:
+  florence2:
+    enabled: true
+    model_id: "microsoft/Florence-2-large"
+    device: "cuda:0"           # or null to use accelerate "auto" mapping
+    hf_cache: "/home/deichler/.cache/huggingface"
+    gen:
+      max_new_tokens: 1024
+      num_beams: 3
+      do_sample: false
+      temperature: 0.0         # optional

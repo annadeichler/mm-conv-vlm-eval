@@ -1,0 +1,110 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vlmeval"
+version = "0.1.0"
+description = "Unified VLM evaluation code for the mmconv benchmark paper."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Anna Deichler" }]
+dependencies = [
+  "ninja",
+  "peft",
+  "accelerate==0.31.0",
+  "deepspeed",
+  "prettytable",
+  "fastapi",
+  "torch @ https://download.pytorch.org/whl/cu124/torch-2.6.0%2Bcu124-cp310-cp310-linux_x86_64.whl",
+  "torchvision @ https://download.pytorch.org/whl/cu124/torchvision-0.21.0%2Bcu124-cp310-cp310-linux_x86_64.whl",
+  "torchaudio @ https://download.pytorch.org/whl/cu124/torchaudio-2.6.0%2Bcu124-cp310-cp310-linux_x86_64.whl",
+  "transformers == 4.51.3",
+  "tokenizers >= 0.21, < 0.22",
+  "huggingface_hub >= 0.23.2, < 1.0",
+  "numpy",
+  "pillow",
+  "httpx >= 0.24.1, < 1.0",
+  "scikit-image",
+  "timm",
+  "iopath",
+  "omegaconf",
+  "decord",
+  "einops",
+  "ftfy",
+  "pytorchvideo @ git+https://github.com//facebookresearch/pytorchvideo@main",
+  "groundinggpt @ git+https://github.com/annadeichler/GroundingGPT@2847cd",
+  "shikra @ git+https://github.com/annadeichler/shikra@main",
+  "opencv-python",
+  "pycocotools",
+  "matplotlib",
+  "pandas",
+  "webdataset",
+  "protobuf",
+  "blobfile",
+  "sentencepiece",
+  "mmengine",
+  "qwen-vl-utils[decord]==0.0.8"
+  ]
+
+
+
+[project.optional-dependencies]
+vision = [
+  "torchvision",
+  "timm",
+  "scikit-image",
+  "pytorchvideo",
+  "iopath",
+]
+serve = [
+  "fastapi",
+  "uvicorn",
+  "gradio==3.23",
+  "markdown2[all]",
+]
+train = [
+  "accelerate==0.31.0",
+  "deepspeed",
+  "peft",
+  "wandb",
+  "sentencepiece",
+]
+io = [
+  "requests",
+  "httpx==0.23.0",
+  "shortuuid",
+]
+data = [
+  "decord",
+  "pycocotools",
+  "librosa",
+  "ftfy",
+  "prettytable",
+  "ninja",
+]
+cuda = [
+  "bitsandbytes==0.41.0; platform_system == 'Linux' and platform_machine == 'x86_64'",
+  "flash-attn; platform_system == 'Linux' and platform_machine == 'x86_64'",
+]
+
+all = [
+  "torchvision", "timm", "scikit-image", "pytorchvideo", "iopath",
+  "fastapi", "uvicorn", "gradio==3.23", "markdown2[all]",
+  "accelerate", "deepspeed", "peft", "wandb", "sentencepiece",
+  "requests", "httpx==0.23.0", "shortuuid",
+  "decord", "pycocotools", "librosa", "ftfy", "prettytable", "ninja",
+  "bitsandbytes==0.41.0; platform_system == 'Linux' and platform_machine == 'x86_64'"]
+
+[tool.setuptools]
+include-package-data = true
+package-dir = {"" = "."}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["lego*", "video_llama*"] 
+
+[tool.setuptools.package-data]
+"lego" = ["**/*.json","**/*.yaml","**/*.yml","**/*.txt","**/*.pt","**/*.bin"]
+"video_llama" = ["**/*.json","**/*.yaml","**/*.yml","**/*.txt"]

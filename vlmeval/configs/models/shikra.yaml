@@ -1,0 +1,10 @@
+models:
+  shikra:
+    enabled: true
+    ckpt: /home/deichler/checkpoints/shikra-7b
+    device: cuda:1
+    max_new_tokens: 256
+    do_sample: false
+    vision_tower: openai/clip-vit-large-patch14
+    image_token_len: 256
+    mm_use_im_start_end: true
